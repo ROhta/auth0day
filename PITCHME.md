@@ -8,19 +8,31 @@ GVA TECH 太田
 
 ---
 
-リーガルテック？
+### リーガルテック？
 
 ---
 
 法律関連のレガシー・労働集約型の領域を
+<br/>
 テクノロジーで代替していく
 
 ---
 
-AI-Con Pro
+特に法務部業務はレガシー
 
 +++
 @transition[zoom]
+
+[AI-CON Pro](https://ai-con-pro.com/)
+
+---
+
+ ### 目次
+
+- マイクロサービス化の流れ
+- Auth0の使いどころ
+
+---
 
 ### マイクロサービス化の流れ
 
@@ -28,8 +40,12 @@ AI-Con Pro
 
 #### サービス構成
 
-最初期は↓だった
+@snap[north]
+最初期
+@snapend
+@snap[south]
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/svg/first.svg?sanitize=true)
+@snapend
 
 ---
 
