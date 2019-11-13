@@ -34,6 +34,7 @@ GVA TECH 太田
 +++
 
 ![gvatechHP](assets/gvatechHP.png)
+<br/>
 弊社HPより
 
 +++
