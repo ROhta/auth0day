@@ -13,7 +13,7 @@ GVA TECH 太田
 ---
 
 法律関連のレガシー・労働集約型の領域を
-<br/>
+
 テクノロジーで代替していく
 
 ---
@@ -23,7 +23,7 @@ GVA TECH 太田
 +++
 @transition[zoom]
 
-[AI-CON Pro](https://ai-con-pro.com/)
+# [AI-CON Pro](https://ai-con-pro.com/)
 
 ---
 
@@ -46,7 +46,6 @@ GVA TECH 太田
 @snap[south]
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/svg/first.svg?sanitize=true)
 @snapend
-
 ---
 
 ### 最終的にAPI14ヶに

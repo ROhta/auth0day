@@ -2,7 +2,7 @@
 theme: beige
 
 #convex, concave, default, fade, none, slide, zoom
-transition: fade
+transition: concave
 
 highlight: mono-blue
 vertical-center: true
