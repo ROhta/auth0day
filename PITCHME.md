@@ -43,7 +43,9 @@ GVA TECH 太田
 @snap[north]
 最初期
 @snapend
+@snap[midpoint]
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/svg/first.svg?sanitize=true)
+@snapend
 
 ---
 
@@ -57,7 +59,9 @@ GVA TECH 太田
 - GVA TECH作成の雛形契約書
 - 顧客作成の雛形契約書
 @snapend
+@snap[midpoint]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/svg/second.svg?sanitize=true)
+@snapend
 
 ---
 
@@ -69,7 +73,9 @@ GVA TECH 太田
 
 elasticserachを使おう
 @snapend
+@snap[midpoint]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/third.svg?sanitize=true)
+@snapend
 
 ---
 
@@ -80,7 +86,9 @@ EC2が増えすぎている
 @snap[north]
 コンテナ管理しよう
 @snapend
+@snap[midpoint]
 ![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/svg/fourth.svg?sanitize=true)
+@snapend
 
 ---
 
@@ -93,7 +101,9 @@ EC2が増えすぎている
 
 AIを使おう
 @snapend
+@snap[midpoint]
 ![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/fifth.svg?sanitize=true)
+@snapend
 
 ---
 
@@ -103,7 +113,9 @@ AIを使おう
 @snap[north]
 Auth0と連携させなければ
 @snapend
+@snap[midpoint]
 ![Auth0](https://raw.github.com/ROhta/auth0day/master/assets/svg/sixth.svg?sanitize=true)
+@snapend
 ---
 
 どうしたらいい？？？？？
@@ -118,7 +130,9 @@ Auth0と連携させなければ
 @snap[north]
 こうなった
 @snapend
+@snap[midpoint]
 ![β版](https://raw.github.com/ROhta/auth0day/master/assets/svg/seventh.svg?sanitize=true)
+@snapend
 
 ---
 
