@@ -10,12 +10,13 @@ GVA TECH 太田
 
 @snap[north]
 本スライドは
-
+<br/>
 以下のQRコードから閲覧可能です。
 @snapend
 @snap[middle]
 ![QRコード](assets/qrcode.png)
 @snapend
+
 ---
 
 ### リーガルテック？
@@ -23,7 +24,7 @@ GVA TECH 太田
 ---
 
 法律関連のレガシー・労働集約型の領域を
-
+<br/>
 テクノロジーで代替していく
 
 ---
