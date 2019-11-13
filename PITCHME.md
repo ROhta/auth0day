@@ -11,7 +11,7 @@ GVA TECH 太田
 @snap[north]
 本スライドは
 <br/>
-以下のQRコードから閲覧可能です。
+こちらから閲覧できます
 @snapend
 @snap[middle]
 ![QRコード](assets/qrcode.png)
