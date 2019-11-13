@@ -8,6 +8,12 @@ GVA TECH 太田
 
 ---
 
+@snap[north]
+本スライドは以下のQRコードから閲覧可能です。
+@snapend
+![QRコード](assets/qrcode.png)
+---
+
 ### リーガルテック？
 
 ---
