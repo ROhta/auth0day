@@ -29,7 +29,38 @@ GVA TECH 太田
 
 ---
 
-特に法務部業務はレガシー
+#### 特に法務はレガシー
+
++++
+
+![gvatechHP](assets/gvatechHP.png)
+弊社HPより
+
++++
+
+スタートアップ・フリーランスを中心に
+<br/>
+サービス展開してきた
+
++++
+
+@snap[north-west]
+ai-con
+@snapend
+@snap[north-east]
+![ai-con](assets/ai-con.png)
+@snapend
+
+@snap[south-west]
+ai-con登記
+@snapend
+@snap[south-east]
+![登記](assets/toki.png)
+@snapend
+
+---
+
+大企業の法務も課題を抱えている！
 
 +++
 @transition[zoom]
@@ -55,7 +86,7 @@ GVA TECH 太田
 最初期
 @snapend
 @snap[midpoint]
-![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/svg/first.svg?sanitize=true)
+![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
 @snapend
 
 ---
@@ -71,7 +102,7 @@ GVA TECH 太田
 - 顧客作成の雛形契約書
 @snapend
 @snap[midpoint]
-![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/svg/second.svg?sanitize=true)
+![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
 
 ---
@@ -85,7 +116,7 @@ GVA TECH 太田
 elasticserachを使おう
 @snapend
 @snap[midpoint]
-![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/third.svg?sanitize=true)
+![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
 @snapend
 
 ---
@@ -98,7 +129,7 @@ EC2が増えすぎている
 コンテナ管理しよう
 @snapend
 @snap[midpoint]
-![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/svg/fourth.svg?sanitize=true)
+![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
 @snapend
 
 ---
@@ -113,7 +144,7 @@ EC2が増えすぎている
 AIを使おう
 @snapend
 @snap[midpoint]
-![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/fifth.svg?sanitize=true)
+![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
 @snapend
 
 ---
@@ -125,7 +156,7 @@ AIを使おう
 Auth0と連携させなければ
 @snapend
 @snap[midpoint]
-![Auth0](https://raw.github.com/ROhta/auth0day/master/assets/svg/sixth.svg?sanitize=true)
+![Auth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
 @snapend
 ---
 
@@ -142,7 +173,7 @@ Auth0と連携させなければ
 こうなった
 @snapend
 @snap[midpoint]
-![β版](https://raw.github.com/ROhta/auth0day/master/assets/svg/seventh.svg?sanitize=true)
+![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
 @snapend
 
 ---
