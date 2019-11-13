@@ -55,6 +55,7 @@ GVA TECH 太田
 
 @snap[north]
 次のどちらでも契約書レビューを行いたい
+
 - GVA TECH作成の雛形契約書
 - 顧客作成の雛形契約書
 @snapend
@@ -68,7 +69,9 @@ GVA TECH 太田
 
 ---
 @snap[north]
-精度を上げるためにelasticserachを使おう
+精度を上げるために
+
+elasticserachを使おう
 @snapend
 @snap[midpoint]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/third.svg?sanitize=true)
@@ -94,7 +97,9 @@ EC2が増えすぎている
 ---
 
 @snap[north]
-精度を上げるためにAIを使おう
+精度を上げるために
+
+AIを使おう
 @snapend
 @snap[midpoint]
 ![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/svg/fifth.svg?sanitize=true)
