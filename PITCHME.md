@@ -29,7 +29,7 @@ AI-Con Pro
 #### サービス構成
 
 最初期は↓だった
-![初期構成](assets/svg/first.svg)
+![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/svg/first.svg?sanitize=true)
 
 ---
 
