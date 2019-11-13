@@ -1,0 +1,13 @@
+#black, moon, night, beige, sky, white
+theme: beige
+
+#convex, concave, default, fade, none, slide, zoom
+transition: fade
+
+highlight: mono-blue
+vertical-center: true
+
+slide-number: true
+footnote: "©2019 R.Ohta"
+mousewheel: true
+#autoslide : 5000

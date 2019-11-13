@@ -3,7 +3,7 @@
 #### ～リーガルテックの事績～
 
 @snap[south]
-GVA TECH株式会社 太田
+GVA TECH 太田
 @snapend
 
 ---
