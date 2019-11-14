@@ -57,7 +57,7 @@ GVA TECH 太田
 
 法律は全ての人に等しく適用される
 <br/>
-⇕
+@fa[arrows-alt-v]
 <br/>
 法務の情報は非対称化する
 
@@ -90,14 +90,14 @@ GVA TECH 太田
 
 ---
 
- ### 目次
+ # 目次
 
 - マイクロサービス化の流れ |
 - Auth0の使いどころ |
 
 ---
 
-### マイクロサービス化の流れ
+# マイクロサービス化の流れ
 
 ---
 
@@ -145,7 +145,7 @@ GVA TECH 太田
 @snap[west span-40 text-left]
 どちらの雛形でも
 <br/>
-契約書レビューを行う
+契約書レビュー
 <br/>
 <br/>
 ・GVA TECH作成
@@ -160,24 +160,25 @@ GVA TECH 太田
 
 精度を上げたい
 
----
-@snap[north]
-精度を上げるために
++++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
+@snap[west span-40]
 elasticserachを使おう
 @snapend
+@snap[east span-60]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
+@snapend
 
 ---
 
 EC2が増えすぎている
 
----
++++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
-@snap[north]
+@snap[west span-40]
 コンテナ管理しよう
 @snapend
-@snap[midpoint]
+@snap[east span-60]
 ![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
 @snapend
 
@@ -185,47 +186,58 @@ EC2が増えすぎている
 
 もっと精度を上げたい
 
----
++++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
-@snap[north]
-精度を上げるために
-
+@snap[west span-40]
 AIを使おう
 @snapend
-@snap[midpoint]
+@snap[east span-60]
 ![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
 @snapend
 
 ---
 
-さあ認証だ
+#### サービス概要
 
----
-@snap[north]
+- 大企業法務向け
+- word add in
+- セキュリティ最重視 |
+
++++
+
+**さあ認証だ**
+
++++?color=linear-gradient(100deg, white 40%, #23566e 60%)
+
+@snap[west span-40]
 Auth0と連携させなければ
 @snapend
-@snap[midpoint]
+@snap[east span-60]
 ![Auth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
 @snapend
----
-
-どうしたらいい？？？？？
 
 ---
 
-
-### Auth0の使いどころ
+@fa[dizzy]どうすればいい@fa[dizzy]
 
 ---
 
-@snap[north]
+
+# Auth0の使いどころ
+
++++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
+
+@snap[west span-40]
 こうなった
 @snapend
-@snap[midpoint]
+@snap[west span-60]
 ![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
 @snapend
 
 ---
+
+### Auth0構成
+
 
  #### 今後の展望
 
