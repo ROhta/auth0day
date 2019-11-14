@@ -162,10 +162,10 @@ GVA TECH 太田
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
-@snap[west span-45]
-elasticsesrchを使おう
+@snap[west span-40]
+elasticsearchを使う
 @snapend
-@snap[east span-55 text-right]
+@snap[east span-60 text-right]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
 @snapend
 
@@ -176,7 +176,7 @@ elasticsesrchを使おう
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
 @snap[west span-40]
-コンテナ管理しよう
+コンテナ管理する
 @snapend
 @snap[east span-60]
 ![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
@@ -189,7 +189,7 @@ elasticsesrchを使おう
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
 @snap[west span-40]
-AIを使おう
+AIを使う
 @snapend
 @snap[east span-60]
 ![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
