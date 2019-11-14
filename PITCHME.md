@@ -123,7 +123,7 @@ GVA TECH 太田
 
 +++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
-@snap[west]
+@snap[west text-right]
 最初期
 @snapend
 @snap[east]
@@ -142,7 +142,7 @@ GVA TECH 太田
 
 +++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
-@snap[west span-40 text-right]
+@snap[west span-40 text-left]
 どちらの雛形でも
 <br/>
 契約書レビューを行う
@@ -152,7 +152,7 @@ GVA TECH 太田
 <br/>
 ・顧客作成
 @snapend
-@snap[east span-60 text-center]
+@snap[east span-60]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
 
