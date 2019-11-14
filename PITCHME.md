@@ -45,9 +45,9 @@ GVA TECH 太田
 
 +++
 
-| AI-CON                       | AI-CON登記               |
-| ---------------------------- | ------------------------ |
-| ![ai-con](assets/ai-con.png) | ![登記](assets/toki.png) |
+| AI-CON                                                                    | AI-CON登記                                                            |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
 
 ---
 
