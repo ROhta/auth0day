@@ -45,19 +45,9 @@ GVA TECH 太田
 
 +++
 
-@snap[north-west]
-ai-con
-@snapend
-@snap[north-east]
-![ai-con](assets/ai-con.png)
-@snapend
-
-@snap[south-west]
-ai-con登記
-@snapend
-@snap[south-east]
-![登記](assets/toki.png)
-@snapend
+| AI-CON                       | AI-CON登記               |
+| ---------------------------- | ------------------------ |
+| ![ai-con](assets/ai-con.png) | ![登記](assets/toki.png) |
 
 ---
 
