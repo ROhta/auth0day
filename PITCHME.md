@@ -121,7 +121,7 @@ GVA TECH 太田
 - word add in |
 - セキュリティ最重視 |
 
-+++
++++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
 @snap[north]
 最初期
@@ -136,19 +136,20 @@ GVA TECH 太田
 
 +++
 
-| スタートアップ<br/>フリーランス | 大企業                         |
-| ------------------------------- | ------------------------------ |
-| 契約書の雛形を持っていない      | 雛形を持っていたりいなかったり |
+| スタートアップ<br/>フリーランス | 大企業                              |
+| ------------------------------- | ----------------------------------- |
+| 契約書の雛形を<br/>持っていない | 雛形を持っていたり<br/>いなかったり |
 
-+++
++++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
-@snap[west span-50 -center]
-#### 次のどちらでも契約書レビューを行いたい
+@snap[west span-40 -center]
+どちらの雛形でも契約書レビューを行う
 
-- GVA TECH作成の雛形契約書
-- 顧客作成の雛形契約書
+GVA TECH作成の雛形契約書
+<br/>
+顧客作成の雛形契約書
 @snapend
-@snap[east span-50 -center]
+@snap[east span-60 -center]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
 
