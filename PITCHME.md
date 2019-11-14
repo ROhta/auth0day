@@ -123,10 +123,10 @@ GVA TECH 太田
 
 +++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
-@snap[north]
+@snap[west]
 最初期
 @snapend
-@snap[midpoint]
+@snap[east]
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
 @snapend
 
@@ -140,14 +140,17 @@ GVA TECH 太田
 | ------------------------------- | ----------------------------------- |
 | 契約書の雛形を<br/>持っていない | 雛形を持っていたり<br/>いなかったり |
 
-+++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
++++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
-@snap[west span-40 -center]
-どちらの雛形でも契約書レビューを行う
-
-GVA TECH作成の雛形契約書
+@snap[west span-40 -right]
+どちらの雛形でも
 <br/>
-顧客作成の雛形契約書
+契約書レビューを行う
+<br/>
+<br/>
+・GVA TECH作成の雛形契約書
+<br/>
+・顧客作成の雛形契約書
 @snapend
 @snap[east span-60 -center]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
