@@ -158,7 +158,7 @@ GVA TECH 太田
 
 ---
 
-精度を上げたい
+#### 精度を上げたい
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
@@ -171,7 +171,7 @@ elasticserachを使おう
 
 ---
 
-EC2が増えすぎている
+#### EC2が増えすぎている
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
@@ -184,7 +184,7 @@ EC2が増えすぎている
 
 ---
 
-もっと精度を上げたい
+#### もっと精度を上げたい
 
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
@@ -197,6 +197,14 @@ AIを使おう
 
 ---
 
+#### やりきった!!
+
++++
+
+#### やりきった...?
+
++++
+
 #### サービス概要
 
 - 大企業法務向け
@@ -205,25 +213,27 @@ AIを使おう
 
 +++
 
-**さあ認証だ**
+#### **さあ認証だ**
 
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
 @snap[west span-40]
-Auth0と連携させなければ
+Auth0と
+<br/>
+連携させなければ
 @snapend
 @snap[east span-60]
 ![Auth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
 @snapend
 
++++
+
+@fa[dizzy]どうすればいいの@fa[dizzy]
+
 ---
 
-@fa[dizzy]どうすればいい@fa[dizzy]
 
----
-
-
-# Auth0の使いどころ
+# Auth0の<br/>使いどころ
 
 +++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
 
@@ -238,8 +248,9 @@ Auth0と連携させなければ
 
 ### Auth0構成
 
+---
 
- #### 今後の展望
+#### 今後の展望
 
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
