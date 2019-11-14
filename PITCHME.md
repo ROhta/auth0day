@@ -162,10 +162,10 @@ GVA TECH 太田
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
-@snap[west span-40]
-elasticserachを使おう
+@snap[west span-45]
+elasticsesrchを使おう
 @snapend
-@snap[east span-60]
+@snap[east span-55 text-right]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
 @snapend
 
