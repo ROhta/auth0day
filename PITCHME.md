@@ -142,15 +142,14 @@ GVA TECH 太田
 
 +++
 
-@snap[north-west]
+@snap[north-west span-40 -center]
 #### 次のどちらでも契約書レビューを行いたい
-@snapend
-@snap[west]
+
 GVA TECH作成の雛形契約書
 <br/>
 顧客作成の雛形契約書
 @snapend
-@snap[east]
+@snap[east span- 60 -center]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
 
