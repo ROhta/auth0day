@@ -161,9 +161,7 @@ GVA TECH 太田
 
 elasticserachを使おう
 @snapend
-@snap[midpoint]
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
-@snapend
 
 ---
 
