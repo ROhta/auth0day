@@ -48,15 +48,15 @@ GVA TECH 太田
 @snap[north-west]
 ai-con
 @snapend
-@snap[north-east]
-![ai-con](assets/ai-con.png)
+@snap[south-west]
+<img src="assets/ai-con.png" alt="ai-con" width="50vw"/>
 @snapend
 
-@snap[south-west]
+@snap[north-east]
 ai-con登記
 @snapend
 @snap[south-east]
-![登記](assets/toki.png)
+<img src="assets/toki.png" alt="登記" width="50vw"/>
 @snapend
 
 ---
