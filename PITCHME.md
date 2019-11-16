@@ -415,19 +415,19 @@ Auth0と
 
 ---
 
- #### customDBの構築
+ #### customDB構築
 
-- [プロファイルで指定されている項目](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes)以外も収集する |
-  - user_metadataかapp_metadata |
-  - [userに操作させたいのでuser_metadata](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2)
+- [profileで指定されている項目](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes)以外も収集する |
+    - user_metadataかapp_metadata |
+    - [userに操作させたいのでuser_metadata](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
 - 顧客情報をuser_metadataに収めきれないかもしれない |
-  - [userあたり16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
-  - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
-  - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
+    - [userあたり16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
+    - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
+    - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
 
 +++
 
-#### customDBへのデータ連携
+#### customDB データ連携
 
 - customDBをpublicに晒さないため、APIを挟む |
 - database connectionsを設定し、ActionScriptsによりAPIへCRUDリクエスト |
