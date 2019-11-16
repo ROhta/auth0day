@@ -250,17 +250,24 @@ elasticsearchを使う
 
 #### 使用技術
 
-- API
-  - 言語: Go
-  - FW: Buffalo
-- DB
-  - Aurora MySQL
-  - elasticsearch
-- CI/CD |
-  - Fargate |
-  - ECS |
-  - github |
-  - CircleCI |
+@snap[west]
+・client
+  ・言語: TypeScript
+  ・FW: vue.js
+・API
+  ・言語: Go
+  ・FW: Buffalo
+・DB
+  ・Aurora MySQL
+  ・elasticsearch
+@snapend
+@snap[east]
+・CI/CD
+  ・Fargate
+  ・ECS
+  ・github
+  ・CircleCI
+@snapend
 
 ---
 
@@ -279,16 +286,26 @@ AIを使う
 
 #### 使用技術
 
-- DB
-  - Aurora MySQL
-  - elasticsearch
-- CI/CD
-  - Fargate
-  - ECS
-  - github
-  - CircleCI
-- AI
-  - SageMaker
+@snap[west]
+・client
+  ・言語: TypeScript
+  ・FW: vue.js
+・API
+  ・言語: Go
+  ・FW: Buffalo
+・DB
+  ・Aurora MySQL
+  ・elasticsearch
+@snapend
+@snap[east]
+・CI/CD
+  ・Fargate
+  ・ECS
+  ・github
+  ・CircleCI
+・AI
+  ・SageMaker
+@snapend
 
 ---
 
