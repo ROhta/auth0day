@@ -1,6 +1,6 @@
 ## Auth0 in Microservices
 
-#### ～リーガルテックの事績～
+### ～リーガルテックの事績～
 
 @snap[south]
 GVA TECH 太田
@@ -68,8 +68,6 @@ GVA TECH 太田
 +++
 
 ![gvatechHP](assets/gvatechHP.png)
-<br/>
-[弊社HP](https://gvatech.co.jp/)より
 
 +++
 
@@ -125,15 +123,6 @@ GVA TECH 太田
 - word add in |
 - セキュリティ最重視 |
 
-+++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
-
-@snap[west text-right]
-最初期
-@snapend
-@snap[east]
-![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
-@snapend
-
 +++
 
 #### 使用技術
@@ -146,6 +135,15 @@ GVA TECH 太田
   - FW: Buffalo
 - DB
   - Aurora MySQL
+
++++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
+
+@snap[west text-right]
+最初期
+@snapend
+@snap[east]
+![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
+@snapend
 
 ---
 
