@@ -415,12 +415,12 @@ Auth0と
 
 ---
 
-customDB構築
+ユーザデータの格納場所
 
 - user_metadata or app_metadata |
-  - [profileで指定されている項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes) |
-  - [userに操作させたいのでuser_metadata](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
-- 顧客情報をuser_metadataに収めきれないかもしれない |
+  - [profileの項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes) |
+  - [userに操作させたい情報はuser_metadataを使用](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
+- 顧客データがuser_metadataに収まらないかもしれない |
   - [userあたり16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
   - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
   - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
@@ -437,6 +437,7 @@ customDB データ連携
 ![Auth0Tenant](https://raw.github.com/ROhta/auth0day/master/assets/diagram/auth0.svg?sanitize=true)
 
 ---
+
 srcIP制限
 
 +++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
