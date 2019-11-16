@@ -252,20 +252,32 @@ elasticsearchを使う
 
 @snap[west]
 ・client
+<br/>
   ・言語: TypeScript
+<br/>
   ・FW: vue.js
+<br/>
 ・API
+<br/>
   ・言語: Go
+<br/>
   ・FW: Buffalo
+<br/>
 ・DB
+<br/>
   ・Aurora MySQL
+<br/>
   ・elasticsearch
 @snapend
 @snap[east]
 ・CI/CD
+<br/>
   ・Fargate
+<br/>
   ・ECS
+<br/>
   ・github
+<br/>
   ・CircleCI
 @snapend
 
@@ -288,22 +300,36 @@ AIを使う
 
 @snap[west]
 ・client
+<br/>
   ・言語: TypeScript
+<br/>
   ・FW: vue.js
+<br/>
 ・API
+<br/>
   ・言語: Go
+<br/>
   ・FW: Buffalo
+<br/>
 ・DB
+<br/>
   ・Aurora MySQL
+<br/>
   ・elasticsearch
 @snapend
 @snap[east]
 ・CI/CD
+<br/>
   ・Fargate
+<br/>
   ・ECS
+<br/>
   ・github
+<br/>
   ・CircleCI
+<br/>
 ・AI
+<br/>
   ・SageMaker
 @snapend
 
