@@ -254,32 +254,32 @@ elasticsearchを使う
 @snap[west]
 ・client
 <br/>
-&nbsp;&nbsp;・言語: TypeScript
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
 <br/>
-&nbsp;&nbsp;・FW: vue.js
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
 <br/>
 ・API
 <br/>
-&nbsp;&nbsp;・言語: Go
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
 <br/>
-&nbsp;&nbsp;・FW: Buffalo
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
 <br/>
 ・DB
 <br/>
-&nbsp;&nbsp;・Aurora MySQL
+&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
 <br/>
-&nbsp;&nbsp;・elasticsearch
+&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
-@snap[east]
+@snap[east text-left]
 ・CI/CD
 <br/>
-&nbsp;&nbsp;・Fargate
+&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
 <br/>
-&nbsp;&nbsp;・ECS
+&nbsp;&nbsp;&nbsp;&nbsp;・ECS
 <br/>
-&nbsp;&nbsp;・github
+&nbsp;&nbsp;&nbsp;&nbsp;・github
 <br/>
-&nbsp;&nbsp;・CircleCI
+&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 @snapend
 
 ---
@@ -303,36 +303,36 @@ AIを使う
 @snap[west]
 ・client
 <br/>
-&nbsp;&nbsp;・言語: TypeScript
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
 <br/>
-&nbsp;&nbsp;・FW: vue.js
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
 <br/>
 ・API
 <br/>
-&nbsp;&nbsp;・言語: Go
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
 <br/>
-&nbsp;&nbsp;・FW: Buffalo
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
 <br/>
 ・DB
 <br/>
-&nbsp;&nbsp;・Aurora MySQL
+&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
 <br/>
-&nbsp;&nbsp;・elasticsearch
+&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
-@snap[east]
+@snap[east text-left]
 ・CI/CD
 <br/>
-&nbsp;&nbsp;・Fargate
+&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
 <br/>
-&nbsp;&nbsp;・ECS
+&nbsp;&nbsp;&nbsp;&nbsp;・ECS
 <br/>
-&nbsp;&nbsp;・github
+&nbsp;&nbsp;&nbsp;&nbsp;・github
 <br/>
-&nbsp;&nbsp;・CircleCI
+&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 <br/>
 ・AI
 <br/>
-&nbsp;&nbsp;・SageMaker
+&nbsp;&nbsp;&nbsp;&nbsp;・SageMaker
 @snapend
 
 ---
