@@ -115,7 +115,7 @@ GVA TECH 太田
 
 ---
 
-#### サービス概要
+### サービス概要
 
 - 大企業法務向け |
 - word add in |
@@ -145,7 +145,7 @@ GVA TECH 太田
 
 ---
 
-#### 仕様変更
+### 仕様変更
 
 +++
 
@@ -178,6 +178,10 @@ GVA TECH 太田
 
 ここが潮目では。
 
++++
+
+#### マイクロサービス化の徹底
+
 +++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
 @snap[west span-40 text-left]
@@ -204,7 +208,7 @@ GVA TECH 太田
 
 ---
 
-#### 精度を上げたい
+### 精度を上げたい
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
@@ -215,9 +219,23 @@ elasticsearchを使う
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
 @snapend
 
++++
+
+#### 使用技術
+
+- client
+  - 言語: TypeScript
+  - FW: vue.js
+- API
+  - 言語: Go
+  - FW: Buffalo
+- DB
+  - Aurora MySQL
+  - elasticsearch |
+
 ---
 
-#### EC2が増えすぎている
+### EC2が増えすぎている
 
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
@@ -228,9 +246,28 @@ elasticsearchを使う
 ![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
 @snapend
 
++++
+
+#### 使用技術
+
+- client
+  - 言語: TypeScript
+  - FW: vue.js
+- API
+  - 言語: Go
+  - FW: Buffalo
+- DB
+  - Aurora MySQL
+  - elasticsearch
+- CI/CD |
+  - Fargate |
+  - ECS |
+  - github |
+  - CircleCI |
+
 ---
 
-#### もっと精度を上げたい
+### もっと精度を上げたい
 
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
@@ -241,17 +278,38 @@ AIを使う
 ![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
 @snapend
 
++++
+
+#### 使用技術
+
+- client
+  - 言語: TypeScript
+  - FW: vue.js
+- API
+  - 言語: Go
+  - FW: Buffalo
+- DB
+  - Aurora MySQL
+  - elasticsearch
+- CI/CD
+  - Fargate
+  - ECS
+  - github
+  - CircleCI
+- AI
+  - SageMaker
+
 ---
 
-#### やりきった!!
+### やりきった!!
 
 +++
 
-#### やりきった...?
+### やりきった...?
 
 +++
 
-#### サービス概要
+### サービス概要
 
 - 大企業法務向け
 - word add in
@@ -259,7 +317,7 @@ AIを使う
 
 +++
 
-#### **さあ認証だ**
+### **さあ認証だ**
 
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
@@ -291,11 +349,11 @@ Auth0と
 
 ---
 
-### Auth0構成
+## Auth0構成
 
 ---
 
-#### 今後の展望
+## 今後の展望
 
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
