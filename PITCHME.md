@@ -90,7 +90,7 @@ GVA TECH 太田
 
 ---
 
- # 目次
+ ## 目次
 
 - マイクロサービス化の流れ |
 - Auth0の使いどころ |
@@ -130,15 +130,47 @@ GVA TECH 太田
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
 @snapend
 
++++
+
+#### 使用技術
+
+- client
+  - 言語: TypeScript
+  - FW: vue.js
+- API
+  - 言語: Go
+  - FW: Buffalo
+- DB
+  - Aurora MySQL
+
 ---
 
 #### 仕様変更
 
 +++
 
+@snap[north]
 | スタートアップ<br/>フリーランス | 大企業                              |
 | ------------------------------- | ----------------------------------- |
 | 契約書の雛形を<br/>持っていない | 雛形を持っていたり<br/>いなかったり |
+@snapend
+
++++
+
+@snap[north]
+| スタートアップ<br/>フリーランス | 大企業                              |
+| ------------------------------- | ----------------------------------- |
+| 契約書の雛形を<br/>持っていない | 雛形を持っていたり<br/>いなかったり |
+| GVA TECH作成の雛形でレビュー    | 顧客企業の雛形でレビュー            |
+@snapend
+
++++
+
+システム上の問題点
+
+- セキュリティレベルの違いから、GVA TECH作成の雛形と顧客企業作成の雛形のDBは分けるべき |
+- 認証のスコープが異なってくるため、リソースサーバはAPIとDBが1対1対応している形が理想 |
+  - DBを分けたらリソースAPIも分ける |
 
 +++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
@@ -155,6 +187,12 @@ GVA TECH 太田
 @snap[east span-60]
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
+
++++
+
+- スキーマ駆動開発 |
+- テスト駆動開発 |
+- アジャイル開発 |
 
 ---
 
@@ -232,7 +270,6 @@ Auth0と
 
 ---
 
-
 # Auth0の<br/>使いどころ
 
 +++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
@@ -240,7 +277,7 @@ Auth0と
 @snap[west span-40]
 こうなった
 @snapend
-@snap[west span-60]
+@snap[east span-60]
 ![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
 @snapend
 
@@ -254,3 +291,15 @@ Auth0と
 
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
+
+
+---
+
+@snap[north]
+本スライドは
+<br/>
+こちらから閲覧できます
+@snapend
+@snap[middle]
+![QRコード](assets/qrcode.png)
+@snapend
