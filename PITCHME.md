@@ -248,37 +248,38 @@ elasticsearchを使う
 
 +++
 
-#### 使用技術
-
+@snap[north]
+使用技術
+@snapend
 @snap[west]
 ・client
 <br/>
-  ・言語: TypeScript
+&nbsp;&nbsp;・言語: TypeScript
 <br/>
-  ・FW: vue.js
+&nbsp;&nbsp;・FW: vue.js
 <br/>
 ・API
 <br/>
-  ・言語: Go
+&nbsp;&nbsp;・言語: Go
 <br/>
-  ・FW: Buffalo
+&nbsp;&nbsp;・FW: Buffalo
 <br/>
 ・DB
 <br/>
-  ・Aurora MySQL
+&nbsp;&nbsp;・Aurora MySQL
 <br/>
-  ・elasticsearch
+&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east]
 ・CI/CD
 <br/>
-  ・Fargate
+&nbsp;&nbsp;・Fargate
 <br/>
-  ・ECS
+&nbsp;&nbsp;・ECS
 <br/>
-  ・github
+&nbsp;&nbsp;・github
 <br/>
-  ・CircleCI
+&nbsp;&nbsp;・CircleCI
 @snapend
 
 ---
@@ -296,41 +297,42 @@ AIを使う
 
 +++
 
-#### 使用技術
-
+@snap[north]
+使用技術
+@snapend
 @snap[west]
 ・client
 <br/>
-  ・言語: TypeScript
+&nbsp;&nbsp;・言語: TypeScript
 <br/>
-  ・FW: vue.js
+&nbsp;&nbsp;・FW: vue.js
 <br/>
 ・API
 <br/>
-  ・言語: Go
+&nbsp;&nbsp;・言語: Go
 <br/>
-  ・FW: Buffalo
+&nbsp;&nbsp;・FW: Buffalo
 <br/>
 ・DB
 <br/>
-  ・Aurora MySQL
+&nbsp;&nbsp;・Aurora MySQL
 <br/>
-  ・elasticsearch
+&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east]
 ・CI/CD
 <br/>
-  ・Fargate
+&nbsp;&nbsp;・Fargate
 <br/>
-  ・ECS
+&nbsp;&nbsp;・ECS
 <br/>
-  ・github
+&nbsp;&nbsp;・github
 <br/>
-  ・CircleCI
+&nbsp;&nbsp;・CircleCI
 <br/>
 ・AI
 <br/>
-  ・SageMaker
+&nbsp;&nbsp;・SageMaker
 @snapend
 
 ---
