@@ -182,6 +182,14 @@ GVA TECH 太田
 
 #### マイクロサービスを徹底するぞ！
 
++++
+
+柔軟＆堅牢な開発のため、徹底しよう
+
+- スキーマ駆動開発 |
+- テスト駆動開発 |
+- アジャイル開発 |
+
 +++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
 @snap[west span-40 text-left]
@@ -198,26 +206,9 @@ GVA TECH 太田
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
 @snapend
 
-+++
-
-柔軟＆堅牢な開発のため、徹底しよう
-
-- スキーマ駆動開発 |
-- テスト駆動開発 |
-- アジャイル開発 |
-
 ---
 
 ### 精度を上げたい
-
-+++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
-
-@snap[west span-40]
-elasticsearchを使う
-@snapend
-@snap[east span-60 text-right]
-![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
-@snapend
 
 +++
 
@@ -233,18 +224,18 @@ elasticsearchを使う
   - Aurora MySQL
   - elasticsearch |
 
----
-
-### EC2が増えすぎている
-
 +++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
 @snap[west span-40]
-コンテナ管理する
+elasticsearchを使う
 @snapend
-@snap[east span-60]
-![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
+@snap[east span-60 text-right]
+![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
 @snapend
+
+---
+
+### EC2が増えすぎている
 
 +++
 
@@ -282,17 +273,54 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 @snapend
 
++++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
+
+@snap[west span-40]
+コンテナ管理する
+@snapend
+@snap[east span-60]
+![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
+@snapend
+
 ---
 
 ### もっと精度を上げたい
 
-+++?color=linear-gradient(100deg, white 40%, #23566e 60%)
++++
 
-@snap[west span-40]
-AIを使う
+@snap[north]
+使用技術
 @snapend
-@snap[east span-60]
-![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
+@snap[west]
+・client
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
+<br/>
+・API
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
+<br/>
+・DB
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
+@snapend
+@snap[east text-left]
+・CI/CD
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・ECS
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・github
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
+<br/>
 @snapend
 
 +++
@@ -333,6 +361,15 @@ AIを使う
 ・AI
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・SageMaker
+@snapend
+
++++?color=linear-gradient(100deg, white 40%, #23566e 60%)
+
+@snap[west span-40]
+AIを使う
+@snapend
+@snap[east span-60]
+![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
 @snapend
 
 ---
