@@ -34,7 +34,7 @@ GVA TECH 太田
 +++
 
 - 契約による法的拘束力は恐ろしい |
-- 契約書を結ぶには、多大な労力によるチェックが必要 |
+- 契約書を結ぶには多大な労力によるチェックが必要 |
 
 +++
 
@@ -180,7 +180,7 @@ GVA TECH 太田
 
 +++
 
-#### マイクロサービス化の徹底
+#### マイクロサービスを徹底するぞ！
 
 +++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
@@ -250,9 +250,6 @@ elasticsearchを使う
 
 #### 使用技術
 
-- client
-  - 言語: TypeScript
-  - FW: vue.js
 - API
   - 言語: Go
   - FW: Buffalo
@@ -282,12 +279,6 @@ AIを使う
 
 #### 使用技術
 
-- client
-  - 言語: TypeScript
-  - FW: vue.js
-- API
-  - 言語: Go
-  - FW: Buffalo
 - DB
   - Aurora MySQL
   - elasticsearch
