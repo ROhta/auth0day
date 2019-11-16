@@ -63,7 +63,7 @@ GVA TECH 太田
 
 ---
 
-## gva tech
+## [gva tech](https://gvatech.co.jp/)
 
 +++
 
@@ -362,7 +362,7 @@ elasticsearchを使う
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 <br/>
-・AI
+・ML
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・SageMaker
 @snapend
@@ -370,10 +370,10 @@ elasticsearchを使う
 +++?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
 @snap[west span-40]
-AIを使う
+機械学習する
 @snapend
 @snap[east span-60]
-![AI使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
+![ML使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
 @snapend
 
 ---
