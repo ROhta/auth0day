@@ -417,8 +417,8 @@ Auth0と
 
 customDB構築
 
-- [profileで指定されている項目](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes)以外も収集する |
-  - user_metadataかapp_metadata |
+- user_metadata or app_metadata |
+  - [profileで指定されている項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes) |
   - [userに操作させたいのでuser_metadata](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
 - 顧客情報をuser_metadataに収めきれないかもしれない |
   - [userあたり16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
