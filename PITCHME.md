@@ -65,7 +65,7 @@ GVA TECH 太田
 
 ![gvatechHP](assets/gvatechHP.png)
 <br/>
-弊社HPより
+[弊社HP](https://gvatech.co.jp/)より
 
 +++
 
@@ -75,7 +75,7 @@ GVA TECH 太田
 
 +++
 
-| AI-CON                                                                    | AI-CON登記                                                            |
+| [AI-CON](https://ai-con.lawyer/)                                          | [AI-CON登記](https://corporate.ai-con.lawyer/)                        |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
 
