@@ -80,7 +80,7 @@ GVA TECH 太田
 
 | [AI-CON](https://ai-con.lawyer/)                                          | [AI-CON登記](https://corporate.ai-con.lawyer/)                        |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 弁護士が行っていた契約書レビューが、AIで行える                            | 行政書士に依頼していた法人登記が、AIで行える                          |
+| 弁護士に依頼していた契約書レビューをAIで行う                              | 行政書士に依頼していた法人登記をAIで行う                              |
 | ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
 
 ---
