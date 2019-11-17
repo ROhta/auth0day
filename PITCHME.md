@@ -101,7 +101,7 @@ GVA TECH 太田
 
 ---
 
-# マイクロサービス化<br/>の流れ
+# マイクロサービス化の流れ
 
 ---
 
@@ -547,7 +547,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 
 +++
 
-- Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある |
+- Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある
   - audienceの型が<br/>値が単一の場合string、複数の場合string配列 |
   - [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
 - [jwt-go側でPRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
