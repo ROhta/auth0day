@@ -484,11 +484,14 @@ customDB データ連携
 
 +++
 
-#### Auth0 SDKのErrorが<br/>依存module jwt-goのError情報を塗り替える
+Auth0 SDKのErrorが
+<br/>
+依存module jwt-goのError情報を塗り替える
 
 +++
 
 [auth0/go-jwt-middleware](https://github.com/auth0/go-jwt-middleware)の抜粋
+<br/>
 ※[dgrijalva/jwt-go](https://github.com/dgrijalva/jwt-go)に依存（package名: jwt）
 ```go
 func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
@@ -518,24 +521,29 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 ```
 @[5](jwt-goの正常値とエラー値の返却)
 @[8](エラーハンドリング)
-@[9](err.Error())
-@[10](生成されたエラーをフォーマットして返却)
-@[18](他の箇所では文字列を渡している)
-
-
-+++
-
+@[10](error型を捨て、err.Error()でstring化して引数に渡す)
+@[11](jwt-goのエラー情報が失われた状態でフォーマットして返却)
+@[19](他の箇所では独自生成したstringを渡している)
 
 +++
 
-- goのmoduleの返り値の型がおかしい
-  - dgrijalva/jwt-go というmodule
-  - Issueにも挙げられている
-  - https://github.com/dgrijalva/jwt-go/pull/355
+問題点
+
+- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
+- errorの種類の判定が不可能 |
+ - auth0/go-jwt-middlewareは使わず、<br/>dgrijalva/jwt-goを用いて直接実装することにした |
 
 +++
 
+jwtの要素の型がぶれる
 
++++
+
+- Auth0ヵら返却されるjwtの要素のうち、型が固定でないものがある |
+  - audienceの型が、値が単一の場合string、複数の場合string配列 |
+  - [jwt-goのIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
+- [jwt-goPRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
+  - merge間に合わなかったため、この箇所を独自実装 |
 
 ---
 
