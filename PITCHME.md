@@ -173,7 +173,7 @@ GVA TECH 太田
 - 雛型契約書のセキュリティレベルが異なる |
   - GVA TECH作成と顧客企業作成で<br/>雛形DBは分けるべき |
 - セキュリティレベルが異なる<br/>=認証のスコープが異なる |
-  - OAuthのフローに従うと、リソースサーバはAPIとDBの1対1対応が理想 |
+  - OAuthのフローに従うと、<br/>リソースサーバはAPIとDBの1対1対応が理想 |
   - DBを分けたらリソースAPIも分ける |
 
 +++
@@ -214,7 +214,7 @@ GVA TECH 太田
 
 ---
 
-### 精度を上げたい
+### 草案条文と雛形条文のマッチ精度を上げたい
 
 +++
 
@@ -245,6 +245,10 @@ elasticsearchを使う
 
 +++
 
+コンテナ管理をしよう
+
++++
+
 @snap[north]
 使用技術
 @snapend
@@ -268,9 +272,10 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
-・Iac
+・IaC
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・terraform
+<br/>
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
@@ -320,16 +325,17 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
-・Iac
+・IaC
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・terraform
+<br/>
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・ECS
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・github
+&nbsp;&nbsp;&nbsp;&nbsp;・GitHub
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 <br/>
@@ -360,16 +366,17 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
-・Iac
+・IaC
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・terraform
+<br/>
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・ECS
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・github
+&nbsp;&nbsp;&nbsp;&nbsp;・GitHub
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 <br/>
