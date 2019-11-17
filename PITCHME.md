@@ -264,6 +264,9 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
+・Iac
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・terraform
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
@@ -313,6 +316,9 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
+・Iac
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・terraform
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
@@ -350,6 +356,9 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
 @snapend
 @snap[east text-left]
+・Iac
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;・terraform
 ・CI/CD
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;・Fargate
@@ -420,7 +429,7 @@ Auth0と
 
 ---
 
-## customDB
+### customDB
 
 +++
 
@@ -439,7 +448,7 @@ Auth0と
 customDB データ連携
 
 - customDBをpublicに晒さないため、APIを挟む |
-- database connectionsを設定し、<br/>ActionScriptsによりAPIへCRUDリクエスト |
+- Database Connectionsを設定し、<br/>ActionScriptsによりAPIへCRUDリクエスト |
 
 +++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
 
@@ -447,18 +456,36 @@ customDB データ連携
 
 ---
 
-## トークン検証API
+### トークン検証API
 
 +++
 
-リソースAPI
-トークン検証処理
+構築経緯
+
+- マイクロサービス化により、リソースAPIが複数 |
+- リソースの数だけトークン検証処理のコードが書かれる |
+- DRY原則 |
+- トークン検証処理をAPI化して、リクエストを送る
+
++++
+
+技術選定
+
+- ~~API Gateway + Lambda~~ |
+  - AWS SAMの導入
+  - 多くのAPIからリクエストを受け続けるので、lambdaの恩恵があまり無い
+- Buffallo API |
+  - その他のコンテナと同一のAPI基盤に載せたほうが無難
+
++++
+
+躓きポイント
 
 ---
 
 ## その他やっていること
 
-- connections |
+- Connections |
   - social login |
 - Rules |
   - srcIP制限 |
@@ -475,13 +502,10 @@ customDB データ連携
 
 ---
 
----
-
-## 今後の展望
+### 今後やっていくこと
 
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
-
 
 ---
 
