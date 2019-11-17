@@ -424,8 +424,8 @@ Auth0と
 
 +++
 
-#### customDB
-#### トークン検証API
+- customDB
+- トークン検証API
 
 ---
 
@@ -465,25 +465,27 @@ customDB データ連携
 - マイクロサービス化により、リソースAPIが複数 |
 - リソースの数だけトークン検証処理のコードが書かれる |
 - DRY原則 |
-- トークン検証処理をAPI化して、リクエストを送る
+- トークン検証処理をAPI化して、リクエストを送る |
 
 +++
 
 技術選定
 
 - ~~API Gateway + Lambda~~ |
-  - AWS SAMの導入
-  - 多くのAPIからリクエストを受け続けるので、lambdaの恩恵があまり無い
+  - AWS SAMの導入 |
+  - 多くのAPIからリクエストを受け続けるので、lambdaの恩恵があまり無い |
 - Buffallo API |
-  - その他のコンテナと同一のAPI基盤に載せたほうが無難
-
-+++
-
-躓きポイント
+  - その他のコンテナと同一のAPI基盤に載せたほうが無難 |
 
 ---
 
-## その他やっていること
+#### 躓きポイント
+
++++
+
+---
+
+### その他やっていること
 
 - Connections |
   - social login |
@@ -491,7 +493,11 @@ customDB データ連携
   - srcIP制限 |
   - MFA |
 
----?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
+---
+
+#### 最終的に
+
++++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
 
 @snap[west span-40]
 こうなった
@@ -506,6 +512,12 @@ customDB データ連携
 
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
+
+---
+
+## [AI-CON Pro](https://ai-con-pro.com/)
+## [β版リリース](https://prtimes.jp/main/html/rd/p/000000030.000033386.html)
+## 問い合わせ受付中
 
 ---
 
