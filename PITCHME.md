@@ -484,9 +484,7 @@ customDB データ連携
 
 +++
 
-Auth0 SDKのErrorが
-<br/>
-依存module jwt-goのError情報を塗り替える
+#### Auth0 SDKが依存module jwt-goのError情報を塗り替える
 
 +++
 
@@ -521,8 +519,8 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 ```
 @[5](jwt-goの正常値とエラー値の返却)
 @[8](エラーハンドリング)
-@[10](error型を捨て、err.Error()でstring化して引数に渡す)
-@[11](jwt-goのエラー情報が失われた状態でフォーマットして返却)
+@[10](error型ではなく、err.Error()でstring化して引数に渡す)
+@[11](jwt-goのエラー情報が失われた状態でフォーマットし、返却)
 @[19](他の箇所では独自生成したstringを渡している)
 
 +++
@@ -530,20 +528,20 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 問題点
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
-- errorの種類の判定が不可能 |
- - auth0/go-jwt-middlewareは使わず、<br/>dgrijalva/jwt-goを用いて直接実装することにした |
+- ErrorHandler内で、errorの種類の判定が不可能 |
+ - auth0/go-jwt-middlewareは使わず、<br/>dgrijalva/jwt-goを用いて直接実装することとした |
 
 +++
 
-jwtの要素の型がぶれる
+#### jwtの要素の型がぶれる
 
 +++
 
-- Auth0ヵら返却されるjwtの要素のうち、型が固定でないものがある |
-  - audienceの型が、値が単一の場合string、複数の場合string配列 |
-  - [jwt-goのIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
-- [jwt-goPRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
-  - merge間に合わなかったため、この箇所を独自実装 |
+- Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある |
+  - audienceの型が<br/>値が単一の場合string、複数の場合string配列 |
+  - [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
+- [jwt-go側でPRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
+  - mergeが間に合わなかったため、<br/>この箇所を独自実装することとした |
 
 ---
 
