@@ -429,7 +429,7 @@ Auth0と
 
 ---
 
-### customDB
+## customDB
 
 +++
 
@@ -456,7 +456,7 @@ customDB データ連携
 
 ---
 
-### トークン検証API
+## トークン検証API
 
 +++
 
@@ -480,15 +480,16 @@ customDB データ連携
 
 ---
 
-#### 躓きポイント
+### 躓きポイント
 
 +++
 
-Auth0 SDKのErrorが、依存moduleのError情報を塗り替える
+#### Auth0 SDKのErrorが<br/>依存module jwt-goのError情報を塗り替える
 
 +++
 
-[auth0/go-jwt-middlewareというmodule](https://github.com/auth0/go-jwt-middleware)
+[auth0/go-jwt-middleware](https://github.com/auth0/go-jwt-middleware)の抜粋
+※[dgrijalva/jwt-go](https://github.com/dgrijalva/jwt-go)に依存（package名: jwt）
 ```go
 func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 中略
@@ -503,14 +504,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 		return fmt.Errorf("Error parsing token: %v", err)
     }
 
-	if m.Options.SigningMethod != nil && m.Options.SigningMethod.Alg() != parsedToken.Header["alg"] {
-		message := fmt.Sprintf("Expected %s signing method but token specified %s",
-			m.Options.SigningMethod.Alg(),
-			parsedToken.Header["alg"])
-		m.logf("Error validating token algorithm: %s", message)
-		m.Options.ErrorHandler(w, r, errors.New(message).Error())
-		return fmt.Errorf("Error validating token algorithm: %s", message)
-	}
+中略
 
 	// Check if the parsed token is valid...
 	if !parsedToken.Valid {
@@ -522,6 +516,12 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 中略
 }
 ```
+@[5](jwt-goの正常値とエラー値の返却)
+@[8](エラーハンドリング)
+@[9](err.Error())
+@[10](生成されたエラーをフォーマットして返却)
+@[18](他の箇所では文字列を渡している)
+
 
 +++
 
