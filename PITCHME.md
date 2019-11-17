@@ -484,7 +484,7 @@ customDB データ連携
 
 +++
 
-#### Auth0 SDKが依存module jwt-goのError情報を塗り替える
+#### Auth0 SDKがjwt-goのError情報を塗り替える
 
 +++
 
@@ -518,7 +518,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 }
 ```
 @[5](jwt-goの正常値とエラー値の返却)
-@[8](エラーハンドリング)
+@[8](エラーハンドリング箇所)
 @[10](error型ではなく、err.Error()でstring化して引数に渡す)
 @[11](jwt-goのエラー情報が失われた状態でフォーマットし、返却)
 @[19](他の箇所では独自生成したstringを渡している)
