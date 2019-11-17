@@ -484,6 +484,59 @@ customDB データ連携
 
 +++
 
+Auth0 SDKのErrorが、依存moduleのError情報を塗り替える
+
++++
+
+[auth0/go-jwt-middlewareというmodule](https://github.com/auth0/go-jwt-middleware)
+```go
+func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
+中略
+
+    // Now parse the token
+	parsedToken, err := jwt.Parse(token, m.Options.ValidationKeyGetter)
+
+	// Check if there was an error in parsing...
+	if err != nil {
+		m.logf("Error parsing token: %v", err)
+		m.Options.ErrorHandler(w, r, err.Error())
+		return fmt.Errorf("Error parsing token: %v", err)
+    }
+
+	if m.Options.SigningMethod != nil && m.Options.SigningMethod.Alg() != parsedToken.Header["alg"] {
+		message := fmt.Sprintf("Expected %s signing method but token specified %s",
+			m.Options.SigningMethod.Alg(),
+			parsedToken.Header["alg"])
+		m.logf("Error validating token algorithm: %s", message)
+		m.Options.ErrorHandler(w, r, errors.New(message).Error())
+		return fmt.Errorf("Error validating token algorithm: %s", message)
+	}
+
+	// Check if the parsed token is valid...
+	if !parsedToken.Valid {
+		m.logf("Token is invalid")
+		m.Options.ErrorHandler(w, r, "The token isn't valid")
+		return errors.New("Token is invalid")
+	}
+
+中略
+}
+```
+
++++
+
+
++++
+
+- goのmoduleの返り値の型がおかしい
+  - dgrijalva/jwt-go というmodule
+  - Issueにも挙げられている
+  - https://github.com/dgrijalva/jwt-go/pull/355
+
++++
+
+
+
 ---
 
 ### その他やっていること
@@ -511,7 +564,8 @@ customDB データ連携
 
 ### 今後やっていくこと
 
-- トークン検証APIの廃棄・処理のプライベートパッケージ化
+- トークン検証API廃棄
+  - 処理のプライベートパッケージ化
 - 各テナント間でCI/CDを回す
 - ActionScriptのTypeScript化
 
