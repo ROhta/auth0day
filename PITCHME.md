@@ -535,11 +535,15 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 
 +++
 
+jwt-goで提供されているerror型
+
++++
+
 問題点
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
 - ErrorHandler内で、errorの種類の判定が困難 |
-  - 例えばexpiredの場合、<br/>err型のErrors要素にはexpired errorの値が入る |
+  - 例えばexpiredの場合、<br/>error型のErrors要素にはexpired errorの値が入る |
   - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
 - APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
   - dgrijalva/jwt-goを用いて直接実装することとした |
