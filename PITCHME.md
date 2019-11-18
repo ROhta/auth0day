@@ -566,7 +566,7 @@ const (
 
 +++
 
-err.Error()の実装
+[err.Error()の実装](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L39-L54)
 
 ```go
 // The error from Parse if token is not valid
