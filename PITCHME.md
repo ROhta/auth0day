@@ -589,11 +589,9 @@ func (e ValidationError) Error() string {
 ```
 @[4](前ページのエラー種別を受ける要素)
 @[9](返り値はstring)
-@[11](Errorsを要素は返却されない)
+@[11](メンバーErrorsは返却されない)
 
 +++
-
-問題点
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
   - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
