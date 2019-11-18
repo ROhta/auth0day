@@ -174,6 +174,15 @@ GVA TECH 太田
   - OAuthのフローに従うと、<br/>リソースサーバはAPIとDBの1対1対応が理想 |
   - DBを分けたらリソースAPIも分ける |
 
++++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
+
+@snap[west text-right]
+最初期
+@snapend
+@snap[east]
+![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
+@snapend
+
 +++
 
 仕様増えた。。。
@@ -449,7 +458,7 @@ Auth0と
   - [profileの項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes) |
   - [userに操作させたい情報はuser_metadataを使用](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
 - 顧客データがuser_metadataに収まらないかも |
-  - [userあたり16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
+  - [user_metadataは合計16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
   - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
   - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
 
@@ -468,13 +477,12 @@ customDB データ連携
 
 ## トークン検証API
 
-
 +++
 構築経緯
 
 - マイクロサービス化により、リソースAPIが複数 |
 - リソースAPIの個数分のトークン検証処理コード |
-  - 処理がばらつく恐れ → 処理統一の必要 |
+  - 処理統一の必要 ⇔ 処理がばらつく恐れ |
   - DRY原則 |
 - トークン検証処理をAPI化して、リクエストを送る |
 
@@ -511,8 +519,8 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 	// Check if there was an error in parsing...
 	if err != nil {
 		m.logf("Error parsing token: %v", err)
-		return fmt.Errorf("Error parsing token: %v", err)
 		m.Options.ErrorHandler(w, r, err.Error())
+		return fmt.Errorf("Error parsing token: %v", err)
     }
 
 中略
@@ -527,6 +535,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 中略
 }
 ```
+
 @[5](jwt-goの正常値とエラー値の返却)
 @[8](エラーハンドリング箇所)
 @[10](error型ではなく、err.Error()でstring化して引数に渡す)
@@ -535,18 +544,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 
 +++
 
-問題点
-
-- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
-  - 例えばexpiredの場合、<br/>error型のErrors要素にはexpired errorの値が入る |
-- ErrorHandler内で、errorの種類の判定が困難 |
-  - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
-- APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
-  - dgrijalva/jwt-goを用いて直接実装することとした |
-
-+++
-
-[jwt-goで提供されているerror](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L15-L43)
+[jwt-goで提供されているerrorの種類](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L15-L43)
 
 ```go
 // The errors that might occur when parsing and validating a token
@@ -568,25 +566,52 @@ const (
 
 +++
 
+err.Error()の実装
+
+```go
+// The error from Parse if token is not valid
+type ValidationError struct {
+	Inner  error  // stores the error returned by external dependencies, i.e.: KeyFunc
+	Errors uint32 // bitfield.  see ValidationError... constants
+	text   string // errors that do not have a valid error just have text
+}
+
+// Validation error is an error type
+func (e ValidationError) Error() string {
+	if e.Inner != nil {
+		return e.Inner.Error()
+	} else if e.text != "" {
+		return e.text
+	} else {
+		return "token is invalid"
+	}
+}
+```
+@[4](前ページのエラー種別を受ける要素)
+@[9](返り値はstring)
+@[11](Errorsを要素は返却されない)
+
++++
+
+問題点
+
+- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
+  - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
+- APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
+  - dgrijalva/jwt-goを用いて直接実装することとした |
+
++++
+
 #### jwtの要素の型がぶれる
 
 +++
 
 - Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある
   - audienceの型が<br/>値が単一の場合string、複数の場合string配列
+  - goでは、型が不定な返却地は扱いづらい
 - [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
   - [PRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
   - このPRのmergeが間に合わなかったため、<br/>該当箇所を独自実装することとした |
-
----
-
-### その他やっていること
-
-- Connections |
-  - social login |
-- Rules |
-  - srcIP制限 |
-  - MFA |
 
 ---
 
@@ -600,6 +625,16 @@ const (
 @snap[east span-60]
 ![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
 @snapend
+
+---
+
+### その他やっていること
+
+- Connections |
+  - social login |
+- Rules |
+  - srcIP制限 |
+  - MFA |
 
 ---
 
