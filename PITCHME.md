@@ -511,8 +511,8 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 	// Check if there was an error in parsing...
 	if err != nil {
 		m.logf("Error parsing token: %v", err)
-		m.Options.ErrorHandler(w, r, err.Error())
 		return fmt.Errorf("Error parsing token: %v", err)
+		m.Options.ErrorHandler(w, r, err.Error())
     }
 
 中略
@@ -535,18 +535,36 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 
 +++
 
-jwt-goで提供されているerror型
-
-+++
-
 問題点
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
-- ErrorHandler内で、errorの種類の判定が困難 |
   - 例えばexpiredの場合、<br/>error型のErrors要素にはexpired errorの値が入る |
+- ErrorHandler内で、errorの種類の判定が困難 |
   - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
 - APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
   - dgrijalva/jwt-goを用いて直接実装することとした |
+
++++
+
+[jwt-goで提供されているerror](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L15-L43)
+
+```go
+// The errors that might occur when parsing and validating a token
+const (
+	ValidationErrorMalformed        uint32 = 1 << iota // Token is malformed
+	ValidationErrorUnverifiable                        // Token could not be verified because of signing problems
+	ValidationErrorSignatureInvalid                    // Signature validation failed
+
+	// Standard Claim validation errors
+	ValidationErrorAudience      // AUD validation failed
+	ValidationErrorExpired       // EXP validation failed
+	ValidationErrorIssuedAt      // IAT validation failed
+	ValidationErrorIssuer        // ISS validation failed
+	ValidationErrorNotValidYet   // NBF validation failed
+	ValidationErrorId            // JTI validation failed
+	ValidationErrorClaimsInvalid // Generic claims validation error
+)
+```
 
 +++
 
