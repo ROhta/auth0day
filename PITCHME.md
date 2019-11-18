@@ -80,7 +80,7 @@ GVA TECH 太田
 
 | [AI-CON](https://ai-con.lawyer/)                                          | [AI-CON登記](https://corporate.ai-con.lawyer/)                        |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 契約書チェックをAIで行う                                                  | 法人の登記書類の作成を<br/>オンラインで行う                           |
+| 契約書チェックを<br/>AIで行う                                             | 法人の登記書類の作成を<br/>オンラインで行う                           |
 | ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
 
 ---
@@ -168,7 +168,7 @@ GVA TECH 太田
 
 システム上の問題点
 
-- 雛型契約書のセキュリティレベルが異なる |
+- ひな型契約書のセキュリティレベルが異なる |
   - GVA TECH作成と顧客企業作成で<br/>ひな型DBは分けるべき |
 - セキュリティレベルが異なる<br/>=認証のスコープが異なる |
   - OAuthのフローに従うと、<br/>リソースサーバはAPIとDBの1対1対応が理想 |
