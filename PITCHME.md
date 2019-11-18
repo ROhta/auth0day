@@ -468,8 +468,8 @@ customDB データ連携
 
 ## トークン検証API
 
-+++
 
++++
 構築経緯
 
 - マイクロサービス化により、リソースAPIが複数 |
@@ -538,8 +538,11 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 問題点
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
-- ErrorHandler内で、errorの種類の判定が不可能 |
- - auth0/go-jwt-middlewareは使わず、<br/>dgrijalva/jwt-goを用いて直接実装することとした |
+- ErrorHandler内で、errorの種類の判定が困難 |
+  - 例えばexpiredの場合、err型のErrors要素にはexpired errorの値が入る |
+  - 値がstring化されると、エラーメッセージで判別することになり、脆弱 |
+- APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
+  - dgrijalva/jwt-goを用いて直接実装することとした |
 
 +++
 
