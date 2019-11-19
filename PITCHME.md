@@ -606,7 +606,7 @@ func (e ValidationError) Error() string {
 
 - Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある
   - audienceの型が<br/>値が単一の場合string、複数の場合string配列
-  - goでは、型が不定な返却地は扱いづらい
+  - goでは、型が不定な返却値は扱いづらい
 - [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
   - [PRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
   - このPRのmergeが間に合わなかったため、<br/>該当箇所を独自実装することとした |
