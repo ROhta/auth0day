@@ -587,13 +587,13 @@ func (e ValidationError) Error() string {
 	}
 }
 ```
-@[4](前ページのエラー種別を受ける要素)
+@[4](前ページのエラーの種類を受けるメンバー)
 @[9](返り値はstring)
 @[11](メンバーErrorsは返却されない)
 
 +++
 
-- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている |
+- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている
   - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
 - APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
   - dgrijalva/jwt-goを用いて直接実装することとした |
