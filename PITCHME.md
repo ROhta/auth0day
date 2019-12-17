@@ -43,17 +43,7 @@ GVA TECH 太田
 
 ---
 
-## [GVA TECH](https://gvatech.co.jp/)
-
-+++
-
-![gvatechHP](assets/gvatechHP.png)
-
-+++
-
-スタートアップ・フリーランスを中心に
-<br/>
-サービス展開してきた
+### [GVA TECH](https://gvatech.co.jp/)
 
 +++
 
@@ -62,14 +52,19 @@ GVA TECH 太田
 | 契約書チェックを<br/>AIで行う                                             | 法人の登記書類の作成を<br/>オンラインで行う                           |
 | ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
 
++++
+
+スタートアップ・フリーランスを中心に
+<br/>
+サービス展開してきた
+
 ---
 
 大企業の法務も同じ課題を抱えている
 
 +++
-@transition[zoom]
 
-# [AI-CON Pro](https://ai-con-pro.com/)
+### [AI-CON Pro](https://ai-con-pro.com/)
 
 ---
 
