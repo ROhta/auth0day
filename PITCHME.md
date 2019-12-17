@@ -1,6 +1,4 @@
-## Auth0 in Microservices
-
-### ～リーガルテックの事績～
+## Microservices in LegalTech
 
 @snap[south]
 GVA TECH 太田
@@ -43,14 +41,6 @@ GVA TECH 太田
 
 ## 知識・スキルの属人化
 
-+++
-
-法律は全ての人に等しく適用される
-<br/>
-@fa[arrows-alt-v]
-<br/>
-経験を積んだ人以外には法務業務が難しくなっている
-
 ---
 
 ## [GVA TECH](https://gvatech.co.jp/)
@@ -80,13 +70,6 @@ GVA TECH 太田
 @transition[zoom]
 
 # [AI-CON Pro](https://ai-con-pro.com/)
-
----
-
- ## 目次
-
-- マイクロサービス化の流れ |
-- Auth0の使いどころ |
 
 ---
 
