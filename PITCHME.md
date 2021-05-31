@@ -295,23 +295,19 @@ elasticsearch投入
 
 ユーザデータの格納場所
 
-- user_metadata or app_metadata |
-  - [profileの項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes) |
-  - [userに操作させたい情報はuser_metadataを使用](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2) |
-- 顧客データがuser_metadataに収まらないかも |
-  - [user_metadataは合計16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices) |
-  - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
-  - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
+* user_metadata or app_metadata
+  * [profileの項目以外のデータを格納する場所](https://auth0.com/docs/users/references/user-profile-structure#user-profile-attributes)
+  * [userに操作させたい情報はuser_metadataを使用](https://community.auth0.com/t/differences-between-client-metadata-and-app-metadata/21388/2)
+* 顧客データがuser_metadataに収まらないかも
+  * [user_metadataは合計16MBまで](https://auth0.com/docs/users/concepts/overview-user-metadata#metadata-best-practices)
+  * [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits)
+  * [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662)
 
 ---
 
 customDB データ連携
-
-- customDBをpublicに晒さないため、APIを挟む |
-- Database Connectionsを設定し、<br/>ActionScriptsによりAPIへCRUDリクエスト |
-
----?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
-
+* customDBをpublicに晒さないため、APIを挟む
+* Database Connectionsを設定し、<br/>ActionScriptsによりAPIへCRUDリクエスト
 ![Auth0Tenant](https://raw.github.com/ROhta/auth0day/master/assets/diagram/auth0.svg?sanitize=true)
 
 ---
@@ -321,21 +317,21 @@ customDB データ連携
 ---
 構築経緯
 
-- マイクロサービス化により、リソースAPIが複数 |
-- リソースAPIの個数分のトークン検証処理コード |
-  - 処理統一の必要 ⇔ 処理がばらつく恐れ |
-  - DRY原則 |
-- トークン検証処理をAPI化して、リクエストを送る |
+* マイクロサービス化により、リソースAPIが複数
+* リソースAPIの個数分のトークン検証処理コード
+  * 処理統一の必要 ⇔ 処理がばらつく恐れ
+  * DRY原則
+* トークン検証処理をAPI化して、リクエストを送る
 
 ---
 
 技術選定
 
-- ~~API Gateway + Lambda~~ |
-  - AWS SAMの導入 |
-  - 多くのAPIからリクエストを受け続けるので、lambdaの恩恵があまり無い |
-- Buffallo API |
-  - 他のコンテナと同一基盤に載せた方が無難 |
+* ~~API Gateway + Lambda~~
+  * AWS SAMの導入
+  * 多くのAPIからリクエストを受け続けるので、lambdaの恩恵があまり無い
+* Buffallo API
+  * 他のコンテナと同一基盤に載せた方が無難
 
 ---
 
@@ -348,12 +344,10 @@ customDB データ連携
 ---
 
 [auth0/go-jwt-middleware](https://github.com/auth0/go-jwt-middleware)の抜粋
-<br/>
 ※[dgrijalva/jwt-go](https://github.com/dgrijalva/jwt-go)に依存（package名: jwt）
 ```go
 func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 中略
-
     // Now parse the token
 	parsedToken, err := jwt.Parse(token, m.Options.ValidationKeyGetter)
 
@@ -363,16 +357,13 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 		m.Options.ErrorHandler(w, r, err.Error())
 		return fmt.Errorf("Error parsing token: %v", err)
     }
-
 中略
-
 	// Check if the parsed token is valid...
 	if !parsedToken.Valid {
 		m.logf("Token is invalid")
 		m.Options.ErrorHandler(w, r, "The token isn't valid")
 		return errors.New("Token is invalid")
 	}
-
 中略
 }
 ```
@@ -433,11 +424,10 @@ func (e ValidationError) Error() string {
 @[11](メンバーErrorsは返却されない)
 
 ---
-
-- ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている
-  - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
-- APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
-  - dgrijalva/jwt-goを用いて直接実装することとした |
+* ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている
+  * 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱
+* APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない
+  * dgrijalva/jwt-goを用いて直接実装することとした
 
 ---
 
@@ -448,32 +438,27 @@ func (e ValidationError) Error() string {
 - Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある
   - audienceの型が<br/>値が単一の場合string、複数の場合string配列
   - goでは、型が不定な返却値は扱いづらい
-- [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348) |
-  - [PRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355) |
-  - このPRのmergeが間に合わなかったため、<br/>該当箇所を独自実装することとした |
+* [jwt-go側のIssueにも挙げられている](https://github.com/dgrijalva/jwt-go/issues/348)
+  * [PRも既に出ている](https://github.com/dgrijalva/jwt-go/pull/355)
+  * このPRのmergeが間に合わなかったため、<br/>該当箇所を独自実装することとした
 
 ---
 
 #### 最終的に
-
----?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
-
-@snap[west span-40]
+---
 こうなった
-@snapend
-@snap[east span-60]
 ![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
-@snapend
+
 
 ---
 
 ### その他やっていること
 
-- Connections |
-  - social login |
-- Rules |
-  - srcIP制限 |
-  - MFA |
+* Connections
+  * social login
+* Rules
+  * srcIP制限
+  * MFA
 
 ---
 
@@ -489,14 +474,3 @@ func (e ValidationError) Error() string {
 ## [AI-CON Pro](https://ai-con-pro.com/)
 ## [β版リリース](https://prtimes.jp/main/html/rd/p/000000030.000033386.html)
 ## 問い合わせ受付中
-
----
-
-@snap[north]
-本スライドは
-<br/>
-こちらから閲覧できます
-@snapend
-@snap[middle]
-![QRコード](assets/qrcode.png)
-@snapend
