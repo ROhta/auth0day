@@ -270,12 +270,12 @@ elasticsearch投入
 ### さあ認証だ
 
 ---
-Auth0と連携させなければ
+
 ![withAuth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
 
 ---
 
-:fearful:どうすればいいの:dizzy:
+:fearful:どうすればいいの:worried:
 
 ---
 
