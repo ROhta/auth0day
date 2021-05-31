@@ -12,7 +12,7 @@ template: invert
 
 ---
 
-### リーガルテック？
+# リーガルテック？
 
 ---
 
@@ -111,9 +111,9 @@ template: invert
 
 ### サービス概要
 
-- 大企業法務向け |
-- Word add in |
-- セキュリティ最重視 |
+* 大企業法務向け
+* Word add in
+* セキュリティ最重視
 
 ---
 
@@ -128,14 +128,11 @@ template: invert
 - DB
   - Aurora MySQL
 
----?color=linear-gradient(100deg, white 50%, #567AD2 50%)
+---
 
-@snap[west text-right]
 最初期
-@snapend
-@snap[east]
+
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
-@snapend
 
 ---
 
@@ -158,20 +155,15 @@ template: invert
 
 システム上の問題点
 
-- ひな型契約書のセキュリティレベルが異なる |
-  - GVA TECH作成と顧客企業作成で<br/>ひな型DBは分けるべき |
-- セキュリティレベルが異なる<br/>=認証のスコープが異なる |
-  - OAuthのフローに従うと、<br/>リソースサーバはAPIとDBの1対1対応が理想 |
-  - DBを分けたらリソースAPIも分ける |
+* ひな型契約書のセキュリティレベルが異なる
+  * GVA TECH作成と顧客作成でひな型DBは分けるべき
+* セキュリティレベルが異なる=認証のスコープが異なる
+  * OAuth2フローに従うと、リソースサービスはAPIとDBの1対1対応が必要
+  * つまり、 DBを分けたらリソースAPIも分ける
 
----?color=linear-gradient(100deg, white 50%, #567AD2 50%)
-
-@snap[west text-right]
+---
 最初期
-@snapend
-@snap[east]
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
-@snapend
 
 ---
 
@@ -189,26 +181,16 @@ template: invert
 
 柔軟＆堅牢な開発のため、徹底しよう
 
-- スキーマ駆動開発 |
-- テスト駆動開発 |
-- アジャイル開発 |
+* スキーマ駆動開発
+* テスト駆動開発
+* アジャイル開発
 
----?color=linear-gradient(100deg, white 40%, #567AD2 60%)
+---
 
-@snap[west span-40 text-left]
-どちらのひな型でも
-<br/>
-契約書レビュー
-<br/>
-<br/>
-・GVA TECH作成
-<br/>
-・顧客作成
-@snapend
-@snap[east span-60]
+どちらのひな型でも契約書レビュー
+- GVA TECH作成
+- 顧客作成
 ![gvaと自社](https://raw.github.com/ROhta/auth0day/master/assets/diagram/second.svg?sanitize=true)
-@snapend
-
 ---
 
 ### 草案条文とひな型条文の<br/>マッチ精度を上げたい
@@ -225,16 +207,11 @@ template: invert
   - FW: Buffalo
 - DB
   - Aurora MySQL
-  - elasticsearch |
+  * elasticsearch
+---
 
----?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
-
-@snap[west span-40]
-elasticsearchを使う
-@snapend
-@snap[east span-60 text-right]
+elasticsearch投入
 ![ES使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/third.svg?sanitize=true)
-@snapend
 
 ---
 
@@ -246,150 +223,31 @@ elasticsearchを使う
 
 ---
 
-@snap[north]
-使用技術
-@snapend
-@snap[west]
-・client
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
-<br/>
-・API
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
-<br/>
-・DB
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
-@snapend
-@snap[east text-left]
-・IaC
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・terraform
-<br/>
-・CI/CD
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・ECS
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・github
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
-@snapend
+追加使用技術
+- IaC
+    - terraform
+- CI/CD
+    - Fargate
+    - ECS
+    - CircleCI
 
----?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
+---
 
-@snap[west span-40]
 コンテナ管理する
-@snapend
-@snap[east span-60]
 ![コンテナ化](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fourth.svg?sanitize=true)
-@snapend
 
 ---
 
 ### もっと精度を上げたい
 
 ---
-
-@snap[north]
-使用技術
-@snapend
-@snap[west]
-・client
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
-<br/>
-・API
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
-<br/>
-・DB
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
-@snapend
-@snap[east text-left]
-・IaC
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・terraform
-<br/>
-・CI/CD
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・ECS
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・GitHub
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
-<br/>
-@snapend
-
+追加使用技術
+- ML
+  - SageMaker
 ---
 
-@snap[north]
-使用技術
-@snapend
-@snap[west]
-・client
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: TypeScript
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: vue.js
-<br/>
-・API
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・言語: Go
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・FW: Buffalo
-<br/>
-・DB
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Aurora MySQL
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・elasticsearch
-@snapend
-@snap[east text-left]
-・IaC
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・terraform
-<br/>
-・CI/CD
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・Fargate
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・ECS
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・GitHub
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
-<br/>
-・ML
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;・SageMaker
-@snapend
-
----?color=linear-gradient(100deg, white 40%, #23566e 60%)
-
-@snap[west span-40]
 機械学習する
-@snapend
-@snap[east span-60]
 ![ML使用](https://raw.github.com/ROhta/auth0day/master/assets/diagram/fifth.svg?sanitize=true)
-@snapend
 
 ---
 
@@ -403,28 +261,21 @@ elasticsearchを使う
 
 ### サービス概要
 
-- 大企業法務向け
-- Word add in
-- セキュリティ最重視 |
+* 大企業法務向け
+* Word add in
+* セキュリティ最重視
 
 ---
 
-### **さあ認証だ**
+### さあ認証だ
 
----?color=linear-gradient(100deg, white 40%, #23566e 60%)
-
-@snap[west span-40]
-Auth0と
-<br/>
-連携させなければ
-@snapend
-@snap[east span-60]
+---
+Auth0と連携させなければ
 ![withAuth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
-@snapend
 
 ---
 
-@fa[dizzy]どうすればいいの@fa[dizzy]
+:fearful:どうすればいいの:dizzy:
 
 ---
 
