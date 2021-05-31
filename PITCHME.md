@@ -1,21 +1,14 @@
+---
+marp: true
+theme: uncover
+paginate: true
+size: 16:9
+template: invert
+---
+
 ## Auth0 in Microservices
 
 ### ～リーガルテックの事績～
-
-@snap[south]
-GVA TECH 太田
-@snapend
-
----
-
-@snap[north]
-本スライドは
-<br/>
-こちらから閲覧できます
-@snapend
-@snap[middle]
-![QRコード](assets/qrcode.png)
-@snapend
 
 ---
 
@@ -31,52 +24,50 @@ GVA TECH 太田
 
 #### 特に法務はレガシー
 
-+++
+---
 
 - 契約による法的拘束力は恐ろしい
-- 契約書は十分なチェックが必要 |
-- 多大な労力と時間がかかる |
-
-+++
-
-- 権利義務関係の明確化
-- リスクコントロール |
-    - 競業禁止規定 |
-    - 任意解除規定 |
-    - 賠償額と条件 |
-    - etc |
-
-+++
-
-## これら全てを<br/>**目視チェック**
-
-+++
-
-## 知識・スキルの属人化
-
-+++
-
-法律は全ての人に等しく適用される
-<br/>
-@fa[arrows-alt-v]
-<br/>
-経験を積んだ人以外には法務業務が難しくなっている
+- 契約書は十分なチェックが必要
+* 多大な労力と時間がかかる
 
 ---
 
-## [GVA TECH](https://gvatech.co.jp/)
+- 権利義務関係の明確化
+- リスクコントロール
+    * 競業禁止規定
+    * 任意解除規定
+    * 賠償額と条件
+    * etc
 
-+++
+---
+
+## これら全てを<br/>**目視チェック**
+
+---
+
+## 知識・スキルの属人化
+
+---
+
+#### 法律は全ての人に等しく適用される
+:arrow_up_down:
+#### 経験を積んだ人以外には法務業務は難しい
+
+---
+
+# [GVA TECH](https://gvatech.co.jp/)
+
+---
 
 ![gvatechHP](assets/gvatechHP.png)
 
-+++
+---
 
 スタートアップ・フリーランスを中心に
 <br/>
 サービス展開してきた
 
-+++
+---
 
 | [AI-CON](https://ai-con.lawyer/)                                          | [AI-CON登記](https://corporate.ai-con.lawyer/)                        |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -87,17 +78,16 @@ GVA TECH 太田
 
 大企業の法務も同じ課題を抱えている
 
-+++
-@transition[zoom]
+---
 
 # [AI-CON Pro](https://ai-con-pro.com/)
 
 ---
 
- ## 目次
+## 目次
 
-- マイクロサービス化の流れ |
-- Auth0の使いどころ |
+* マイクロサービス化の流れ
+* Auth0の使いどころ
 
 ---
 
@@ -125,7 +115,7 @@ GVA TECH 太田
 - Word add in |
 - セキュリティ最重視 |
 
-+++
+---
 
 #### 使用技術
 
@@ -138,7 +128,7 @@ GVA TECH 太田
 - DB
   - Aurora MySQL
 
-+++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
+---?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
 @snap[west text-right]
 最初期
@@ -151,20 +141,20 @@ GVA TECH 太田
 
 ### 仕様変更
 
-+++
+---
 
 | 大企業                                | スタートアップ<br/>フリーランス   |
 | ------------------------------------- | --------------------------------- |
 | ひな型を持っていたり<br/>いなかったり | 契約書のひな型を<br/>持っていない |
 
-+++
+---
 
 | 大企業                                                | スタートアップ<br/>フリーランス     |
 | ----------------------------------------------------- | ----------------------------------- |
 | ひな型を持っていたり<br/>いなかったり                 | 契約書のひな型を<br/>持っていない   |
 | 顧客企業作成・GVA TECH作成<br/>両方のひな型でレビュー | GVA TECH作成の<br/>ひな型でレビュー |
 
-+++
+---
 
 システム上の問題点
 
@@ -174,7 +164,7 @@ GVA TECH 太田
   - OAuthのフローに従うと、<br/>リソースサーバはAPIとDBの1対1対応が理想 |
   - DBを分けたらリソースAPIも分ける |
 
-+++?color=linear-gradient(100deg, white 50%, #567AD2 50%)
+---?color=linear-gradient(100deg, white 50%, #567AD2 50%)
 
 @snap[west text-right]
 最初期
@@ -183,19 +173,19 @@ GVA TECH 太田
 ![初期構成](https://raw.github.com/ROhta/auth0day/master/assets/diagram/first.svg?sanitize=true)
 @snapend
 
-+++
+---
 
 仕様増えた。。。
 
-+++
+---
 
 ここが潮目では。
 
-+++
+---
 
 #### マイクロサービス化を徹底するぞ
 
-+++
+---
 
 柔軟＆堅牢な開発のため、徹底しよう
 
@@ -203,7 +193,7 @@ GVA TECH 太田
 - テスト駆動開発 |
 - アジャイル開発 |
 
-+++?color=linear-gradient(100deg, white 40%, #567AD2 60%)
+---?color=linear-gradient(100deg, white 40%, #567AD2 60%)
 
 @snap[west span-40 text-left]
 どちらのひな型でも
@@ -223,7 +213,7 @@ GVA TECH 太田
 
 ### 草案条文とひな型条文の<br/>マッチ精度を上げたい
 
-+++
+---
 
 #### 使用技術
 
@@ -237,7 +227,7 @@ GVA TECH 太田
   - Aurora MySQL
   - elasticsearch |
 
-+++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
+---?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
 @snap[west span-40]
 elasticsearchを使う
@@ -250,11 +240,11 @@ elasticsearchを使う
 
 ### EC2が増えすぎている
 
-+++
+---
 
 コンテナ管理をしよう
 
-+++
+---
 
 @snap[north]
 使用技術
@@ -294,7 +284,7 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・CircleCI
 @snapend
 
-+++?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
+---?color=linear-gradient(100deg, white 40%, #3f9ac4 60%)
 
 @snap[west span-40]
 コンテナ管理する
@@ -307,7 +297,7 @@ elasticsearchを使う
 
 ### もっと精度を上げたい
 
-+++
+---
 
 @snap[north]
 使用技術
@@ -348,7 +338,7 @@ elasticsearchを使う
 <br/>
 @snapend
 
-+++
+---
 
 @snap[north]
 使用技術
@@ -392,7 +382,7 @@ elasticsearchを使う
 &nbsp;&nbsp;&nbsp;&nbsp;・SageMaker
 @snapend
 
-+++?color=linear-gradient(100deg, white 40%, #23566e 60%)
+---?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
 @snap[west span-40]
 機械学習する
@@ -405,11 +395,11 @@ elasticsearchを使う
 
 ### やりきった!!
 
-+++
+---
 
 ### やりきった...?
 
-+++
+---
 
 ### サービス概要
 
@@ -417,11 +407,11 @@ elasticsearchを使う
 - Word add in
 - セキュリティ最重視 |
 
-+++
+---
 
 ### **さあ認証だ**
 
-+++?color=linear-gradient(100deg, white 40%, #23566e 60%)
+---?color=linear-gradient(100deg, white 40%, #23566e 60%)
 
 @snap[west span-40]
 Auth0と
@@ -432,7 +422,7 @@ Auth0と
 ![withAuth0](https://raw.github.com/ROhta/auth0day/master/assets/diagram/sixth.svg?sanitize=true)
 @snapend
 
-+++
+---
 
 @fa[dizzy]どうすればいいの@fa[dizzy]
 
@@ -440,7 +430,7 @@ Auth0と
 
 # Auth0の<br/>使いどころ
 
-+++
+---
 
 - customDB
 - トークン検証API
@@ -450,7 +440,7 @@ Auth0と
 
 ## customDB
 
-+++
+---
 
 ユーザデータの格納場所
 
@@ -462,14 +452,14 @@ Auth0と
   - [userあたり10項目まで](https://auth0.com/docs/users/references/metadata-field-name-rules#metadata-size-limits) |
   - [custom DBを構築するのがよい](https://community.auth0.com/t/metadata-size-limits/6662) |
 
-+++
+---
 
 customDB データ連携
 
 - customDBをpublicに晒さないため、APIを挟む |
 - Database Connectionsを設定し、<br/>ActionScriptsによりAPIへCRUDリクエスト |
 
-+++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
+---?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
 
 ![Auth0Tenant](https://raw.github.com/ROhta/auth0day/master/assets/diagram/auth0.svg?sanitize=true)
 
@@ -477,7 +467,7 @@ customDB データ連携
 
 ## トークン検証API
 
-+++
+---
 構築経緯
 
 - マイクロサービス化により、リソースAPIが複数 |
@@ -486,7 +476,7 @@ customDB データ連携
   - DRY原則 |
 - トークン検証処理をAPI化して、リクエストを送る |
 
-+++
+---
 
 技術選定
 
@@ -500,11 +490,11 @@ customDB データ連携
 
 ### 躓きポイント
 
-+++
+---
 
 #### Auth0 SDKがjwt-goのError情報を塗り替える
 
-+++
+---
 
 [auth0/go-jwt-middleware](https://github.com/auth0/go-jwt-middleware)の抜粋
 <br/>
@@ -542,7 +532,7 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 @[11](jwt-goのエラー情報が失われた状態でフォーマットし、返却)
 @[19](他の箇所では独自生成したstringを渡している)
 
-+++
+---
 
 [jwt-goで提供されているerrorの種類](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L15-L43)
 
@@ -564,7 +554,7 @@ const (
 )
 ```
 
-+++
+---
 
 [err.Error()の実装](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L39-L54)
 
@@ -591,18 +581,18 @@ func (e ValidationError) Error() string {
 @[9](返り値はstring)
 @[11](メンバーErrorsは返却されない)
 
-+++
+---
 
 - ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている
   - 値がstring化されると、<br/>エラーメッセージで判別することになり、脆弱 |
 - APIでのエラーハンドリングが困難になるため、auth0/go-jwt-middlewareは使用しない |
   - dgrijalva/jwt-goを用いて直接実装することとした |
 
-+++
+---
 
 #### jwtの要素の型がぶれる
 
-+++
+---
 
 - Auth0から返却されるjwtの要素のうち、<br/>型が固定でないものがある
   - audienceの型が<br/>値が単一の場合string、複数の場合string配列
@@ -615,7 +605,7 @@ func (e ValidationError) Error() string {
 
 #### 最終的に
 
-+++?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
+---?color=linear-gradient(100deg, white 40%, #0b1a21 60%)
 
 @snap[west span-40]
 こうなった
