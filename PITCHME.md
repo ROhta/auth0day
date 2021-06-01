@@ -338,41 +338,38 @@ customDB データ連携
 
 ---
 
-#### Auth0 SDKがjwt-goのError情報を塗り替える
+#### :one:Auth0 SDKがjwt-goのError情報を塗り替える
 
 ---
 
 [auth0/go-jwt-middleware](https://github.com/auth0/go-jwt-middleware)の抜粋
-※[dgrijalva/jwt-go](https://github.com/dgrijalva/jwt-go)に依存（package名: jwt）
-```go
-func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
-中略
-    // Now parse the token
-	parsedToken, err := jwt.Parse(token, m.Options.ValidationKeyGetter)
+[dgrijalva/jwt-go](https://github.com/dgrijalva/jwt-go)に依存する（package名: jwt）
 
-	// Check if there was an error in parsing...
-	if err != nil {
-		m.logf("Error parsing token: %v", err)
-		m.Options.ErrorHandler(w, r, err.Error())
-		return fmt.Errorf("Error parsing token: %v", err)
-    }
+---
+
+```go
+func (m *JWTMiddleware) CheckJWT (w http.ResponseWriter, r *http.Request) error {
 中略
-	// Check if the parsed token is valid...
-	if !parsedToken.Valid {
-		m.logf("Token is invalid")
-		m.Options.ErrorHandler(w, r, "The token isn't valid")
-		return errors.New("Token is invalid")
-	}
+  //jwt-goの正常値とエラー値の返却
+  parsedToken, err := jwt.Parse(token, m.Options.ValidationKeyGetter)
+
+  //jwt-goのエラーハンドリング
+  if err != nil {
+    m.logf("Error parsing token: %v", err)
+    // error型ではなく、err.Error()でstring化して引数に渡す
+    m.Options.ErrorHandler(w, r, err.Error())
+    return fmt.Errorf("Error parsing token: %v", err)
+  }
+中略
+  //jwt-goのエラー情報が失われた状態でフォーマットし、返却
+  if !parsedToken.Valid {
+    m.logf("Token is invalid")
+    m.Options.ErrorHandler(w, r, "The token isn't valid")
+    return errors.New("Token is invalid")
+  }
 中略
 }
 ```
-
-@[5](jwt-goの正常値とエラー値の返却)
-@[8](エラーハンドリング箇所)
-@[10](error型ではなく、err.Error()でstring化して引数に渡す)
-@[11](jwt-goのエラー情報が失われた状態でフォーマットし、返却)
-@[19](他の箇所では独自生成したstringを渡している)
-
 ---
 
 [jwt-goで提供されているerrorの種類](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L15-L43)
@@ -380,18 +377,18 @@ func (m *JWTMiddleware) CheckJWT(w http.ResponseWriter, r *http.Request) error {
 ```go
 // The errors that might occur when parsing and validating a token
 const (
-	ValidationErrorMalformed        uint32 = 1 << iota // Token is malformed
-	ValidationErrorUnverifiable                        // Token could not be verified because of signing problems
-	ValidationErrorSignatureInvalid                    // Signature validation failed
+  ValidationErrorMalformed        uint32 = 1 << iota // Token is malformed
+  ValidationErrorUnverifiable                        // Token could not be verified because of signing problems
+  ValidationErrorSignatureInvalid                    // Signature validation failed
 
-	// Standard Claim validation errors
-	ValidationErrorAudience      // AUD validation failed
-	ValidationErrorExpired       // EXP validation failed
-	ValidationErrorIssuedAt      // IAT validation failed
-	ValidationErrorIssuer        // ISS validation failed
-	ValidationErrorNotValidYet   // NBF validation failed
-	ValidationErrorId            // JTI validation failed
-	ValidationErrorClaimsInvalid // Generic claims validation error
+  // Standard Claim validation errors
+  ValidationErrorAudience      // AUD validation failed
+  ValidationErrorExpired       // EXP validation failed
+  ValidationErrorIssuedAt      // IAT validation failed
+  ValidationErrorIssuer        // ISS validation failed
+  ValidationErrorNotValidYet   // NBF validation failed
+  ValidationErrorId            // JTI validation failed
+  ValidationErrorClaimsInvalid // Generic claims validation error
 )
 ```
 
@@ -399,28 +396,30 @@ const (
 
 [err.Error()の実装](https://github.com/dgrijalva/jwt-go/blob/master/errors.go#L39-L54)
 
+---
+
 ```go
+// 前ページのエラーの種類を受けるメンバー
 // The error from Parse if token is not valid
 type ValidationError struct {
-	Inner  error  // stores the error returned by external dependencies, i.e.: KeyFunc
-	Errors uint32 // bitfield.  see ValidationError... constants
-	text   string // errors that do not have a valid error just have text
+  Inner  error  // stores the error returned by external dependencies, i.e.: KeyFunc
+  Errors uint32 // bitfield.  see ValidationError... constants
+  text   string // errors that do not have a valid error just have text
 }
 
+// 返り値はstring
+// メンバーErrorsは返却されない
 // Validation error is an error type
 func (e ValidationError) Error() string {
-	if e.Inner != nil {
-		return e.Inner.Error()
-	} else if e.text != "" {
-		return e.text
-	} else {
-		return "token is invalid"
-	}
+  if e.Inner != nil {
+    return e.Inner.Error()
+  } else if e.text != "" {
+    return e.text
+  } else {
+    return "token is invalid"
+  }
 }
 ```
-@[4](前ページのエラーの種類を受けるメンバー)
-@[9](返り値はstring)
-@[11](メンバーErrorsは返却されない)
 
 ---
 * ErrorHandlerを独自実装可能だが、<br/>error型ではなくstring型が引数に指定されている
