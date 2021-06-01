@@ -446,8 +446,7 @@ func (e ValidationError) Error() string {
 
 #### 最終的に
 ---
-こうなった
-![β版](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
+![width:600px](https://raw.github.com/ROhta/auth0day/master/assets/diagram/seventh.svg?sanitize=true)
 
 
 ---
