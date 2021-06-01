@@ -69,10 +69,9 @@ template: invert
 
 ---
 
-| [AI-CON](https://ai-con.lawyer/)                                          | [AI-CON登記](https://corporate.ai-con.lawyer/)                        |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 契約書チェックを<br/>AIで行う                                             | 法人の登記書類の作成を<br/>オンラインで行う                           |
-| ![ai-con](https://raw.github.com/ROhta/auth0day/master/assets/ai-con.png) | ![登記](https://raw.github.com/ROhta/auth0day/master/assets/toki.png) |
+| [AI-CON](https://ai-con.lawyer/) | [AI-CON登記](https://corporate.ai-con.lawyer/) |
+| -------------------------------- | ---------------------------------------------- |
+| 契約書チェックを<br/>AIで行う    | 法人の登記書類の作成を<br/>オンラインで行う    |
 
 ---
 
@@ -104,8 +103,8 @@ template: invert
 4. 修正版を契約書の締結相手に送る
 5. 1~4を繰り返す
 ```
-@[2](Wordで行うことが殆ど)
-@[3](条文単位で行う、草案とひな型の条文順は異なるので照らし合わせが大変)
+- 2:point_right:Wordで行うことが殆ど
+- 3:point_right:条文単位で行う。草案とひな型の条文順が異なり、照らし合わせが大変
 
 ---
 
