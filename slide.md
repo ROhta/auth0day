@@ -6,13 +6,13 @@ size: 16:9
 template: invert
 ---
 
-# Auth0 in Microservices
+## Auth0 in Microservices
 
 ### ～リーガルテックの事績～
 
 ---
 
-#### リーガルテック？
+# リーガルテック？
 
 ---
 
@@ -27,13 +27,13 @@ template: invert
 ---
 
 - 契約による法的拘束力は恐ろしい
-* 契約書は十分なチェックが必要
+- 契約書は十分なチェックが必要
 * 多大な労力と時間がかかる
 
 ---
 
-* 権利義務関係の明確化
-* リスクコントロール
+- 権利義務関係の明確化
+- リスクコントロール
     * 競業禁止規定
     * 任意解除規定
     * 賠償額と条件
@@ -103,8 +103,8 @@ template: invert
 4. 修正版を契約書の締結相手に送る
 5. 1~4を繰り返す
 ```
-* 2:point_right:Wordで行うことが殆ど
-* 3:point_right:条文単位で行う。草案とひな型の条文順が異なり、照らし合わせが大変
+- 2:point_right:Wordで行うことが殆ど
+- 3:point_right:条文単位で行う。草案とひな型の条文順が異なり、照らし合わせが大変
 
 ---
 
@@ -223,12 +223,12 @@ elasticsearch投入
 ---
 
 追加使用技術
-* IaC
-    * terraform
-* CI/CD
-    * Fargate
-    * ECS
-    * CircleCI
+- IaC
+    - terraform
+- CI/CD
+    - Fargate
+    - ECS
+    - CircleCI
 
 ---
 
@@ -241,8 +241,8 @@ elasticsearch投入
 
 ---
 追加使用技術
-* ML
-  * SageMaker
+- ML
+  - SageMaker
 ---
 
 機械学習する
