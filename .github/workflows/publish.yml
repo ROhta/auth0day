@@ -7,22 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.3
-      - name: Delete marprc
-        run: rm ./.marprc.yml
-      - name: Copy resources
-        working-directory: slides
-        run: cp --parents ./**/*.png ./**/*.jpg ../doc
-      - name: Change permission
-        run: chmod 777 -R ./doc
-      - name: Generate HTML
-        uses: docker://marpteam/marp-cli:v0.17.0
-        with:
-          args: "--workdir /github/workspace --input-dir slides --output doc --html --allow-local-files --theme ./theme.css"
-      - name: Show ls
-        run: ls -la ./doc
-      - name: GitHub Pages action
+      - name: Convert Markdown into HTML and PDF
+        uses: KoharaKazuya/marp-cli-action@v1
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./doc
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
